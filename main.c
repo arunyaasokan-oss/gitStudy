@@ -28,5 +28,7 @@ int main()
     pOperation = BitAndOperation;
     pOperation();
     
+    pOperation = BitOROperation;
+    pOperation();
     return 1;
 }
