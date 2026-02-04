@@ -19,6 +19,7 @@
 //*********************** Forward declartion **********************************
 void BitAndOperation(void);
 void BitOROperation(void);
+void BitRightShiftOperation(void);
 
 //*********************** Inline function implementation **********************
 
