@@ -30,5 +30,8 @@ int main()
     
     pOperation = BitOROperation;
     pOperation();
+
+    pOperation = BitRightShiftOperation;
+    pOperation();
     return 1;
 }
