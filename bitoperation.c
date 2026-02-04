@@ -58,3 +58,21 @@ void BitOROperation(void)
     ulResult = ulNum1 & ulNum2;
     printf("a & b :%u \n",ulResult);
 }
+//*****************************************************************************
+//Purpose   :Perform bitwise NOT  operation
+//Input     :none  
+//Output    :none
+//Return    :none
+//Note      :
+//*****************************************************************************
+void BitNotOperation(void)
+{
+    uint32_t ulNum1 = 0;
+    
+    uint32_t ulResult = 0;
+
+    ulNum1 = 5;
+    
+    ulResult = ~ulNum1 ;
+    printf("!a:%u \n",ulResult);
+}
