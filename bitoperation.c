@@ -72,26 +72,7 @@ void BitNotOperation(void)
     uint32_t ulResult = 0;
 
     ulNum1 = 5;
-    
+
     ulResult = ~ulNum1 ;
     printf("!a:%u \n",ulResult);
-}
-//*****************************************************************************
-//Purpose   :Perform bitwise right shift operation
-//Input     :none  
-//Output    :none
-//Return    :none
-//Note      :
-//*****************************************************************************
-void BitRightShiftOperation(void)
-{
-    uint32_t ulNum1 = 0;
-    uint32_t ulshftPos = 0; 
-
-    uint32_t ulResult = 0;
-
-    ulNum1 = 5;
-    ulshftPos = 2;
-    ulResult = ulNum1 >> ulshftPos ;
-    printf("%d >> %d = %u \n",ulNum1,ulshftPos,ulResult);
 }
