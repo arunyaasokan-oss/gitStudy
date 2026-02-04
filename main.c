@@ -23,6 +23,12 @@
 
 int main()
 {
-    BitOperation();
+    void (*pOperation)(void);
+
+    pOperation = BitAndOperation;
+    pOperation();
+    
+    pOperation = BitOROperation;
+    pOperation();
     return 1;
 }

@@ -21,13 +21,13 @@
 //************************* Local functions ***********************************
 
 //*****************************************************************************
-//Purpose   :Perform bitwise operation
-//Input     :   
-//Output    :
-//Return    :
+//Purpose   :Perform bitwise And wise operation
+//Input     :none  
+//Output    :none
+//Return    :none
 //Note      :
 //*****************************************************************************
-void BitOperation(void)
+void BitAndOperation(void)
 {
     uint32_t ulNum1 = 0;
     uint32_t ulNum2 = 0;
@@ -37,5 +37,24 @@ void BitOperation(void)
     ulNum2 = 4;
 
     ulResult = ulNum1 & ulNum2;
-    printf("a & b :%u",ulResult);
+    printf("a & b :%u \n",ulResult);
+}
+//*****************************************************************************
+//Purpose   :Perform bitwise And wise operation
+//Input     :none  
+//Output    :none
+//Return    :none
+//Note      :
+//*****************************************************************************
+void BitOROperation(void)
+{
+    uint32_t ulNum1 = 0;
+    uint32_t ulNum2 = 0;
+    uint32_t ulResult = 0;
+
+    ulNum1 = 5;
+    ulNum2 = 4;
+
+    ulResult = ulNum1 & ulNum2;
+    printf("a & b :%u \n",ulResult);
 }
