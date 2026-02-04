@@ -17,7 +17,7 @@
 //**********************Global variable ***************************************
 
 //*********************** Forward declartion **********************************
-void BitOperation(void);
+void BitAndOperation(void);
 
 //*********************** Inline function implementation **********************
 
