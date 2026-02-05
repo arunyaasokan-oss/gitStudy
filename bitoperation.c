@@ -36,11 +36,12 @@ void BitAndOperation(void)
     int32_t lNum2 = 0;
     int32_t lResult = 0;
 
-    lNum1 = 5;
-    lNum2 = 4;
+    lNum1 = 10;
+    lNum2 = 9;
 
     lResult = lNum1 & lNum2;
     printf("%u & %u : %u \n",lNum1, lNum2, lResult);
+    printf("%x & %x : %x \n",lNum1, lNum2, lResult);
     BitOperationPrintBinary(lResult);
 }
 //*****************************************************************************
@@ -159,5 +160,4 @@ static void BitOperationPrintBinary(int32_t lInput)
         printf("%d",lBit);
    }
    printf("\n");
-  
 }
