@@ -82,7 +82,9 @@ void BitNotOperation(void)
     lNum1 = 5;
 
     lResult = ~lNum1 ;
-    printf("!%d :%u \n",lNum1, lResult);
+    printf("!%d :%d \n",lNum1, lResult);
+    printf("!%x : %x \n",lNum1, lResult);
+    BitOperationPrintBinary(lResult);
 }
 //*****************************************************************************
 //Purpose   :Perform bitwise right shift operation
@@ -101,7 +103,8 @@ void BitRightShiftOperation(void)
     lNum1 = 5;
     lshftPos = 2;
     lResult = lNum1 >> lshftPos ;
-    printf("%d >> %d = %u \n",lNum1,lshftPos,lResult);
+    printf("%d >> %d = %u \n",lNum1, lshftPos, lResult);
+    printf("%x >> %x = %x\n",lNum1, lshftPos, lResult);
 }
 //*****************************************************************************
 //Purpose   :Perform bitwise left shift operation
@@ -121,6 +124,7 @@ void BitLeftShiftOperation(void)
     lshftPos = 2;
     lResult = lNum1 >> lshftPos ;
     printf("%d >> %d = %u \n",lNum1,lshftPos,lResult);
+    printf("%x >> %x = %x\n",lNum1, lshftPos, lResult);
 }
 //*****************************************************************************
 // Purpose  : To set a bit 
