@@ -31,6 +31,9 @@ int main()
     pOperation = BitOROperation;
     pOperation();
 
+    pOperation = BitNotOperation;
+    pOperation();
+
     pOperation = BitRightShiftOperation;
     pOperation();
     pOperation = BitLeftShiftOperation;
