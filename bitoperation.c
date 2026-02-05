@@ -124,6 +124,7 @@ void BitLeftShiftOperation(void)
     lshftPos = 2;
     lResult = lNum1 >> lshftPos ;
     printf("%d >> %d = %u \n",lNum1,lshftPos,lResult);
+    printf("%x >> %x = %x\n",lNum1, lshftPos, lResult);
 }
 //*****************************************************************************
 // Purpose  : To set a bit 
