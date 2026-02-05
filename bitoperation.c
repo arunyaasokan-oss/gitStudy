@@ -14,11 +14,14 @@
 
 //*************************Local types*****************************************
 
-//*************************Local contants*************************************
+//*************************Local contants**************************************
+#define SET_BIT 1
+#define BITCOUNT 8
 
 //*************************Local variables ************************************
 
 //************************* Local functions ***********************************
+static void BitOperationPrintBinary(int32_t lInput);
 
 //*****************************************************************************
 //Purpose   :Perform bitwise And wise operation
@@ -29,15 +32,16 @@
 //*****************************************************************************
 void BitAndOperation(void)
 {
-    uint32_t ulNum1 = 0;
-    uint32_t ulNum2 = 0;
-    uint32_t ulResult = 0;
+    int32_t lNum1 = 0;
+    int32_t lNum2 = 0;
+    int32_t lResult = 0;
 
-    ulNum1 = 5;
-    ulNum2 = 4;
+    lNum1 = 5;
+    lNum2 = 4;
 
-    ulResult = ulNum1 & ulNum2;
-    printf("a & b :%u \n",ulResult);
+    lResult = lNum1 & lNum2;
+    printf("%u & %u : %u \n",lNum1, lNum2, lResult);
+    BitOperationPrintBinary(lResult);
 }
 //*****************************************************************************
 //Purpose   :Perform bitwise And wise operation
@@ -48,15 +52,17 @@ void BitAndOperation(void)
 //*****************************************************************************
 void BitOROperation(void)
 {
-    uint32_t ulNum1 = 0;
-    uint32_t ulNum2 = 0;
-    uint32_t ulResult = 0;
+    int32_t lNum1 = 0;
+    int32_t lNum2 = 0;
+    int32_t lResult = 0;
 
-    ulNum1 = 5;
-    ulNum2 = 4;
+    lNum1 = 5;
+    lNum2 = 4;
 
-    ulResult = ulNum1 & ulNum2;
-    printf("a & b :%u \n",ulResult);
+    lResult = lNum1 | lNum2;
+    printf("%d | %d :%u \n",lNum1, lNum2, lResult);
+
+    BitOperationPrintBinary(lResult);
 }
 //*****************************************************************************
 //Purpose   :Perform bitwise NOT  operation
@@ -67,14 +73,14 @@ void BitOROperation(void)
 //*****************************************************************************
 void BitNotOperation(void)
 {
-    uint32_t ulNum1 = 0;
+    int32_t lNum1 = 0;
     
-    uint32_t ulResult = 0;
+    int32_t lResult = 0;
 
-    ulNum1 = 5;
+    lNum1 = 5;
 
-    ulResult = ~ulNum1 ;
-    printf("!a:%u \n",ulResult);
+    lResult = ~lNum1 ;
+    printf("!%d :%u \n",lNum1, lResult);
 }
 //*****************************************************************************
 //Purpose   :Perform bitwise right shift operation
@@ -85,15 +91,15 @@ void BitNotOperation(void)
 //*****************************************************************************
 void BitRightShiftOperation(void)
 {
-    uint32_t ulNum1 = 0;
-    uint32_t ulshftPos = 0; 
+    int32_t lNum1 = 0;
+    int32_t lshftPos = 0; 
 
-    uint32_t ulResult = 0;
+    int32_t lResult = 0;
 
-    ulNum1 = 5;
-    ulshftPos = 2;
-    ulResult = ulNum1 >> ulshftPos ;
-    printf("%d >> %d = %u \n",ulNum1,ulshftPos,ulResult);
+    lNum1 = 5;
+    lshftPos = 2;
+    lResult = lNum1 >> lshftPos ;
+    printf("%d >> %d = %u \n",lNum1,lshftPos,lResult);
 }
 //*****************************************************************************
 //Purpose   :Perform bitwise left shift operation
@@ -104,13 +110,54 @@ void BitRightShiftOperation(void)
 //*****************************************************************************
 void BitLeftShiftOperation(void)
 {
-    uint32_t ulNum1 = 0;
-    uint32_t ulshftPos = 0; 
+    int32_t lNum1 = 0;
+    int32_t lshftPos = 0; 
 
-    uint32_t ulResult = 0;
+    int32_t lResult = 0;
 
-    ulNum1 = 5;
-    ulshftPos = 2;
-    ulResult = ulNum1 >> ulshftPos ;
-    printf("%d >> %d = %u \n",ulNum1,ulshftPos,ulResult);
+    lNum1 = 5;
+    lshftPos = 2;
+    lResult = lNum1 >> lshftPos ;
+    printf("%d >> %d = %u \n",lNum1,lshftPos,lResult);
+}
+//*****************************************************************************
+// Purpose  : To set a bit 
+// Input    : none
+// Output   : none
+// Return   : none
+// Note     : 
+//*****************************************************************************
+void BitOperationSetBit(void)
+{
+    int32_t lNum1 = 0;
+    int32_t lPos = 0;
+    int32_t lResult = 0;
+
+    lNum1 = 4;
+    lPos = 4;
+
+    lResult = lNum1 |= (SET_BIT << lPos);
+    printf("%d\n",lResult);
+}
+//*****************************************************************************
+// Purpose  : print a number into binary
+// Input    : ulInput - input a decimal number
+// Output   : none
+// Result   : none
+// Note     : 
+//*****************************************************************************
+static void BitOperationPrintBinary(int32_t lInput)
+{
+   int32_t lNoofBits = 0;
+   int32_t lIndex = 0;
+   int32_t lBit = 0;
+   lNoofBits = sizeof(int) * BITCOUNT;
+
+   for(lIndex = lNoofBits - 1; lIndex >= 0; lIndex--)
+   {
+        lBit = (lInput >> lIndex ) & SET_BIT;
+        printf("%d",lBit);
+   }
+   printf("\n");
+  
 }
