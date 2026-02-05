@@ -162,3 +162,26 @@ static void BitOperationPrintBinary(int32_t lInput)
    }
    printf("\n");
 }
+
+//*****************************************************************************
+//Purpose   : To find out a number is odd or even
+//Input     : none
+//Output    : none
+//Return    : none
+//Note      : none
+//*****************************************************************************
+void BitOperationCheckOddOrEven(void)
+{
+    int32_t lCheckNum = 0;
+
+    lCheckNum = 5;
+
+    if(lCheckNum & 1 )
+    {
+        printf(" It is a odd number \n");
+    }
+    else 
+    {
+        printf("It is a even number \n");
+    }
+}

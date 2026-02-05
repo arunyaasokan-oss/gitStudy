@@ -22,6 +22,7 @@ void BitOROperation(void);
 void BitNotOperation(void);
 void BitRightShiftOperation(void);
 void BitLeftShiftOperation(void);
+void BitOperationCheckOddOrEven(void);
 
 //*********************** Inline function implementation **********************
 
