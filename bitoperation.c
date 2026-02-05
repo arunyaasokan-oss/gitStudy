@@ -57,8 +57,7 @@ void BitOROperation(void)
     int32_t lNum2 = 0;
     int32_t lResult = 0;
 
-    lNum1 = 5;
-    lNum2 = 4;
+    BitOperationReadInput(&lNum1, &lNum2);
 
     lResult = lNum1 | lNum2;
     printf("%d | %d :%u \n",lNum1, lNum2, lResult);
