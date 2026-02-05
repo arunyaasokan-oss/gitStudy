@@ -227,15 +227,15 @@ static void BitOperationGetNotOperand(int32_t *lInputNum1)
 // Return    :
 // Note      :
 //*****************************************************************************
-static void BitOperationShiftOperand(int32_t *lInputData1,
-                                     int32_t *lShiftPos)
+static void BitOperationShiftOperand(int32_t *plInputData1,
+                                     int32_t *plShiftPos)
 {
-    *lInputData1 = 0;
-    *lShiftPos = 0;
+    *plInputData1 = 0;
+    *plShiftPos = 0;
 
     printf("enter a number\n");
-    scanf(" %d", lInputData1);
+    scanf(" %d", plInputData1);
 
     printf("enter the position to shift\n");
-    scanf(" %d", lShiftPos); 
+    scanf(" %d", plShiftPos); 
 }
