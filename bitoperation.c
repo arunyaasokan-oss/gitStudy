@@ -24,7 +24,6 @@
 static void BitOperationPrintBinary(int32_t lInput);
 static void BitOperationReadInput(int32_t *lInputData1, int32_t *lInputData2);
 static void BitOperationGetNotOperand(int32_t *lInputNum1);
-static void BitOperationGetOddOrEven(int32_t *lInputNum1);
 static void BitOperationShiftOperand(int32_t *lInputData1,
                                      int32_t *lShiftPos);
 
@@ -180,10 +179,6 @@ void BitOperationCheckOddOrEven(void)
     int32_t lCheckNum = 0;
 
     BitOperationGetOddOrEven(&lCheckNum);
-    
-    if(lCheckNum & 1 )
-    lCheckNum = 5;
-
     if (lCheckNum & 1)
     {
         printf(" It is a odd number \n");
@@ -209,7 +204,7 @@ static void BitOperationReadInput(int32_t *lInputData1, int32_t *lInputData2)
     scanf(" %d", lInputData1);
 
     printf("enter second number\n");
-    scanf(" %d",lInputData2);
+    scanf(" %d", lInputData2);
 }
 //*****************************************************************************
 // Purpose   :   Read operand for BITWISE NOT operator
@@ -241,18 +236,5 @@ static void BitOperationShiftOperand(int32_t *lInputData1,
     scanf(" %d", lInputData1);
 
     printf("enter the position to shift\n");
-    scanf(" %d",lShiftPos); 
-}
-//*****************************************************************************
-//Purpose   :   Read operand for finfing odd or even
-//Input     :   none
-//Output    :   none
-//Return    :   none
-//Note      :
-//*****************************************************************************
-static void BitOperationGetOddOrEven(int32_t *lInputNum1)
-{
-    lInputNum1 = 0;
-    printf("enter input to find BITWISE NOT\n");
-    scanf(" %d",lInputNum1);
+    scanf(" %d", lShiftPos); 
 }
