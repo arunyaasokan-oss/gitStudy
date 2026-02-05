@@ -26,7 +26,6 @@ static void BitOperationReadInput(int32_t *lInputData1, int32_t *lInputData2);
 static void BitOperationGetNotOperand(int32_t *lInputNum1);
 static void BitOperationShiftOperand(int32_t *lInputData1,
                                      int32_t *lShiftPos);
-static void BitOperationGetOddOrEven(int32_t *lInputNum1);
 
 //*****************************************************************************
 // Purpose   :Perform bitwise And wise operation
@@ -204,18 +203,19 @@ static void BitOperationReadInput(int32_t *lInputData1, int32_t *lInputData2)
 
     printf("enter first number\n");
     scanf(" %d", lInputData1);
+    scanf(" %d", lInputData1);
 
     printf("enter second number\n");
-    scanf(" %d", lInputData2);
+    scanf(" %d",lInputData2);
 }
 //*****************************************************************************
-// Purpose   :   Read operand for BITWISE NOT operator
-// Input     :   none
-// Output    :   none
-// Return    :   none
-// Note      :
+//Purpose   :   Read operand for BITWISE NOT operator
+//Input     :   none
+//Output    :   none
+//Return    :   none
+//Note      :
 //*****************************************************************************
-static void BitOperationGetNotOperand(int32_t *lInputNum1)
+static void BitOperationGetOddOrEven(int32_t *lInputNum1)
 {
     lInputNum1 = 0;
     printf("enter input to find BITWISE NOT\n");
