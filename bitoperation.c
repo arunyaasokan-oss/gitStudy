@@ -23,6 +23,7 @@
 //************************* Local functions ***********************************
 static void BitOperationPrintBinary(int32_t lInput);
 static void BitOperationReadInput(int32_t *lInputData1, int32_t *lInputData2);
+static void BitOperationGetNotOperand(int32_t *lInputNum1);
 
 //*****************************************************************************
 //Purpose   :Perform bitwise And wise operation
@@ -40,8 +41,8 @@ void BitAndOperation(void)
     BitOperationReadInput(&lNum1, &lNum2);
     
     lResult = lNum1 & lNum2;
-    printf("%u & %u : %u \n",lNum1, lNum2, lResult);
-    printf("%x & %x : %x \n",lNum1, lNum2, lResult);
+    printf("%u & %u : %d \n", lNum1, lNum2, lResult);
+    printf("%x & %x : %x \n", lNum1, lNum2, lResult);
     BitOperationPrintBinary(lResult);
 }
 //*****************************************************************************
@@ -60,8 +61,8 @@ void BitOROperation(void)
     BitOperationReadInput(&lNum1, &lNum2);
 
     lResult = lNum1 | lNum2;
-    printf("%d | %d :%u \n",lNum1, lNum2, lResult);
-    printf("%x | %x : %x \n",lNum1, lNum2, lResult);
+    printf("%d | %d :%d \n", lNum1, lNum2, lResult);
+    printf("%x | %x :%x \n", lNum1, lNum2, lResult);
 
     BitOperationPrintBinary(lResult);
 }
@@ -75,14 +76,12 @@ void BitOROperation(void)
 void BitNotOperation(void)
 {
     int32_t lNum1 = 0;
-    
     int32_t lResult = 0;
 
-    lNum1 = 5;
-
+    BitOperationGetNotOperand(&lNum1);
     lResult = ~lNum1 ;
-    printf("!%d :%d \n",lNum1, lResult);
-    printf("!%x : %x \n",lNum1, lResult);
+    printf("!%d :%d \n", lNum1, lResult);
+    printf("!%x :%x \n", lNum1, lResult);
     BitOperationPrintBinary(lResult);
 }
 //*****************************************************************************
@@ -205,4 +204,17 @@ static void BitOperationReadInput(int32_t *lInputData1, int32_t *lInputData2)
 
     printf("enter second number\n");
     scanf(" %d",lInputData2);
+}
+//*****************************************************************************
+//Purpose   :   Read operand for BITWISE NOT operator
+//Input     :   none
+//Output    :   none
+//Return    :   none
+//Note      :
+//*****************************************************************************
+static void BitOperationGetNotOperand(int32_t *lInputNum1)
+{
+    lInputNum1 = 0;
+    printf("enter input to find BITWISE NOT\n");
+    scanf(" %d",lInputNum1);
 }
