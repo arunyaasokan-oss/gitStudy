@@ -26,6 +26,7 @@ static void BitOperationReadInput(int32_t *lInputData1, int32_t *lInputData2);
 static void BitOperationGetNotOperand(int32_t *lInputNum1);
 static void BitOperationShiftOperand(int32_t *lInputData1,
                                      int32_t *lShiftPos);
+static void BitOperationGetOddOrEven(int32_t *lInputNum1);
 
 //*****************************************************************************
 // Purpose   :Perform bitwise And wise operation
