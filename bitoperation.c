@@ -62,6 +62,7 @@ void BitOROperation(void)
 
     lResult = lNum1 | lNum2;
     printf("%d | %d :%u \n",lNum1, lNum2, lResult);
+    printf("%x | %x : %x \n",lNum1, lNum2, lResult);
 
     BitOperationPrintBinary(lResult);
 }
