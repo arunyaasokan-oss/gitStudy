@@ -22,6 +22,7 @@
 
 //************************* Local functions ***********************************
 static void BitOperationPrintBinary(int32_t lInput);
+static void BitOperationReadInput(int32_t *lInputData1, int32_t *lInputData2);
 
 //*****************************************************************************
 //Purpose   :Perform bitwise And wise operation
@@ -36,9 +37,8 @@ void BitAndOperation(void)
     int32_t lNum2 = 0;
     int32_t lResult = 0;
 
-    lNum1 = 10;
-    lNum2 = 9;
-
+    BitOperationReadInput(&lNum1, &lNum2);
+    
     lResult = lNum1 & lNum2;
     printf("%u & %u : %u \n",lNum1, lNum2, lResult);
     printf("%x & %x : %x \n",lNum1, lNum2, lResult);
@@ -196,14 +196,14 @@ void BitOperationCheckOddOrEven(void)
 //Return    :   none
 //Note      :   
 //*****************************************************************************
-void BitOperationReadInput(void)
+static void BitOperationReadInput(int32_t *lInputData1, int32_t *lInputData2)
 {
-    int32_t lInputData1 = 0;
-    int32_t lInputData2 = 0;
+    *lInputData1 = 0;
+    *lInputData2 = 0;
 
     printf("enter first number\n");
-    scanf(" %d",&lInputData1);
+    scanf(" %d",lInputData1);
 
     printf("enter second number\n");
-    scanf(" %d",&lInputData2);
+    scanf(" %d",lInputData2);
 }
