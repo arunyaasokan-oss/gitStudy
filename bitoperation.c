@@ -114,3 +114,21 @@ void BitLeftShiftOperation(void)
     ulResult = ulNum1 >> ulshftPos ;
     printf("%d >> %d = %u \n",ulNum1,ulshftPos,ulResult);
 }
+//*****************************************************************************
+//Purpose   :   Read input from user
+//Input     :   none
+//Output    :   none
+//Return    :   none
+//Note      :   
+//*****************************************************************************
+void BitOperationReadInput(void)
+{
+    int32_t lInputData1 = 0;
+    int32_t lInputData2 = 0;
+
+    printf("enter first number\n");
+    scanf(" %d",&lInputData1);
+
+    printf("enter second number\n");
+    scanf(" %d",&lInputData2);
+}
