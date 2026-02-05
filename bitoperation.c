@@ -189,3 +189,21 @@ void BitOperationCheckOddOrEven(void)
         printf("It is a even number \n");
     }
 }
+//*****************************************************************************
+//Purpose   :   Read input from user
+//Input     :   none
+//Output    :   none
+//Return    :   none
+//Note      :   
+//*****************************************************************************
+void BitOperationReadInput(void)
+{
+    int32_t lInputData1 = 0;
+    int32_t lInputData2 = 0;
+
+    printf("enter first number\n");
+    scanf(" %d",&lInputData1);
+
+    printf("enter second number\n");
+    scanf(" %d",&lInputData2);
+}
