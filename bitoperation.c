@@ -82,7 +82,8 @@ void BitNotOperation(void)
     lNum1 = 5;
 
     lResult = ~lNum1 ;
-    printf("!%d :%u \n",lNum1, lResult);
+    printf("!%d :%d \n",lNum1, lResult);
+    printf("!%x : %x \n",lNum1, lResult);
 }
 //*****************************************************************************
 //Purpose   :Perform bitwise right shift operation
