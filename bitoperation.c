@@ -103,7 +103,8 @@ void BitRightShiftOperation(void)
     lNum1 = 5;
     lshftPos = 2;
     lResult = lNum1 >> lshftPos ;
-    printf("%d >> %d = %u \n",lNum1,lshftPos,lResult);
+    printf("%d >> %d = %u \n",lNum1, lshftPos, lResult);
+    printf("%x >> %x = %x\n",lNum1, lshftPos, lResult);
 }
 //*****************************************************************************
 //Purpose   :Perform bitwise left shift operation
