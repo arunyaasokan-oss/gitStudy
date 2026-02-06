@@ -213,11 +213,11 @@ static void BitOperationReadInput(int32_t *lInputData1, int32_t *lInputData2)
 // Return    :   none
 // Note      :
 //*****************************************************************************
-static void BitOperationGetOddOrEven(int32_t *lInputNum1)
+static void BitOperationGetOddOrEven(int32_t *plInputNum1)
 {
-    lInputNum1 = 0;
+    *plInputNum1 = 0;
     printf("enter input to find BITWISE NOT\n");
-    scanf(" %d", lInputNum1);
+    scanf(" %d", plInputNum1);
 }
 //*****************************************************************************
 // Purpose   :   Read operand for shift operation
