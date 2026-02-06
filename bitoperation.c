@@ -238,3 +238,18 @@ static void BitOperationShiftOperand(int32_t *plInputData1,
     printf("enter the position to shift\n");
     scanf(" %d", plShiftPos); 
 }
+//*****************************************************************************
+// Purpose   :   Read operand for shift operation
+// Input     :
+// Output    :
+// Return    :
+// Note      :
+//*****************************************************************************
+static void BitOperationGetNotOperand(int32_t *plInputNum1)
+{
+    *plInputNum1 = 0;
+
+    printf("enter a number to find out BITWISE NOT\n");
+    scanf(" %d", plInputNum1);
+}
+
