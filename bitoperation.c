@@ -182,11 +182,11 @@ void BitOperationCheckOddOrEven(void)
     
     if(lCheckNum & 1 )
     {
-        printf(" It is a odd number \n");
+        printf(" %d  is a odd number \n",lCheckNum);
     }
     else
     {
-        printf("It is a even number \n");
+        printf("%d is a even number \n",lCheckNum);
     }
 }
 //*****************************************************************************
