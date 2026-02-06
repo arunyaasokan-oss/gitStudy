@@ -40,5 +40,8 @@ int main()
     pOperation = BitLeftShiftOperation;
     pOperation();
 
+    pOperation = BitOperationSetBit;
+    pOperation();
+
     return 1;
 }
