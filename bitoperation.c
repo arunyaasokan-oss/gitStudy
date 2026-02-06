@@ -99,8 +99,8 @@ void BitRightShiftOperation(void)
     int32_t lshftPos = 0;
     int32_t lResult = 0;
 
-    lNum1 = 5;
-    lshftPos = 2;
+    BitOperationShiftOperand(&lNum1, &lshftPos);
+    
     lResult = lNum1 >> lshftPos;
     printf("%d >> %d = %u \n", lNum1, lshftPos, lResult);
     printf("%x >> %x = %x\n", lNum1, lshftPos, lResult);
@@ -156,7 +156,7 @@ static void BitOperationPrintBinary(int32_t lInput)
     int32_t lNoofBits = 0;
     int32_t lIndex = 0;
     int32_t lBit = 0;
-    
+
     lNoofBits = sizeof(int) * BITCOUNT;
 
     for (lIndex = lNoofBits - 1; lIndex >= 0; lIndex--)
