@@ -196,15 +196,15 @@ void BitOperationCheckOddOrEven(void)
 // Return    :   none
 // Note      :
 //*****************************************************************************
-static void BitOperationReadInput(int32_t *lInputData1, int32_t *lInputData2)
+static void BitOperationReadInput(int32_t *plInputData1, int32_t *plInputData2)
 {
-    *lInputData1 = 0;
-    *lInputData2 = 0;
+    *plInputData1 = 0;
+    *plInputData2 = 0;
 
     printf("enter first number\n");
-    scanf(" %d", lInputData1);
+    scanf(" %d", plInputData1);
     printf("enter second number\n");
-    scanf(" %d", lInputData2);
+    scanf(" %d", plInputData2);
 }
 //*****************************************************************************
 // Purpose   :   Read operand for BITWISE NOT operator
