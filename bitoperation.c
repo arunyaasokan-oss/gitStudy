@@ -241,9 +241,9 @@ static void BitOperationShiftOperand(int32_t *plInputData1,
     printf("enter the position to shift\n");
     scanf(" %d", plShiftPos); 
 }
-static void BitOperationGetOddOrEven(int32_t *lInputNum1)
+static void BitOperationGetOddOrEven(int32_t *plInputNum1)
 {
-    lInputNum1 = 0;
+    *plInputNum1 = 0;
     printf("enter input to find Odd /Even\n");
-    scanf(" %d",lInputNum1);
+    scanf(" %d",plInputNum1);
 }
